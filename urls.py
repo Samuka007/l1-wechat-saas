@@ -11,17 +11,17 @@ an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express o
 specific language governing permissions and limitations under the License.
 """
 
-from django.conf.urls import include, url
 from django.contrib import admin
+from django.urls import path
+from moments.views import home, show_user, show_status, submit_post, set_super_user
+from django.contrib.auth.views import LogoutView
+
 
 urlpatterns = [
-    url(r"^admin/", admin.site.urls),
-    url(r"^account/", include("blueapps.account.urls")),
-    # 如果你习惯使用 Django 模板，请在 home_application 里开发你的应用，
-    # 这里的 home_application 可以改成你想要的名字
-    url(r"^", include("home_application.urls")),
-    # 如果你习惯使用 mako 模板，请在 mako_application 里开发你的应用，
-    # 这里的 mako_application 可以改成你想要的名字
-    url(r"^mako/", include("mako_application.urls")),
-    url(r"^i18n/", include("django.conf.urls.i18n")),
+    path('admin/', admin.site.urls),
+    path('', home),
+    path('user/', show_user),
+    path('status/', show_status),
+    path('post/', submit_post),
+    # path('set-su/', set_super_user),
 ]

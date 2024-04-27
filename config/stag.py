@@ -20,6 +20,7 @@ else:
 
 # 预发布环境
 RUN_MODE = "STAGING"
+BK_STATIC_URL = "/stag--" + APP_CODE
 
 # 只对预发布环境日志级别进行配置，可以在这里修改
 # from blueapps.conf.log import set_log_level # noqa
@@ -35,7 +36,6 @@ if FRONTEND_BACKEND_SEPARATION:
     MIDDLEWARE = ("corsheaders.middleware.CorsMiddleware",) + MIDDLEWARE
     CORS_ORIGIN_ALLOW_ALL = True
     CORS_ALLOW_CREDENTIALS = True
-
 # DATABASES.update(
 #     {
 #         'default': {
