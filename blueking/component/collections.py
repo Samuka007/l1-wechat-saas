@@ -12,18 +12,17 @@ from .apis.monitor_v3 import CollectionsMonitorV3
 from .apis.sops import CollectionsSOPS
 from .apis.usermanage import CollectionsUSERMANAGE
 
-
 # Available components
 AVAILABLE_COLLECTIONS = {
-    'bk_login': CollectionsBkLogin,
-    'bk_paas': CollectionsBkPaas,
-    'cc': CollectionsCC,
-    'cmsi': CollectionsCMSI,
-    'gse': CollectionsGSE,
-    'itsm': CollectionsITSM,
-    'job': CollectionsJOB,
-    'jobv3': CollectionsJOBV3,
-    'monitor_v3': CollectionsMonitorV3,
-    'sops': CollectionsSOPS,
-    'usermanage': CollectionsUSERMANAGE,
+    "bk_login": CollectionsBkLogin,
+    "bk_paas": CollectionsBkPaas,
+    "cc": CollectionsCC,
+    "cmsi": CollectionsCMSI,
+    "gse": CollectionsGSE,
+    "itsm": CollectionsITSM,
+    "job": CollectionsJOB,
+    "jobv3": CollectionsJOBV3,
+    "monitor_v3": CollectionsMonitorV3,
+    "sops": CollectionsSOPS,
+    "usermanage": CollectionsUSERMANAGE,
 }

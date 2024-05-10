@@ -106,9 +106,7 @@ LOGGING = get_logging_config_dict(locals())
 
 # 初始化管理员列表，列表中的人员将拥有预发布环境和正式环境的管理员权限
 # 注意：请在首次提测和上线前修改，之后的修改将不会生效
-INIT_SUPERUSER = [
-    "202230500071X"
-]
+INIT_SUPERUSER = ["202230500071X"]
 
 
 # 使用mako模板时，默认打开的过滤器：h(过滤html)
@@ -128,8 +126,8 @@ TIME_ZONE = "Asia/Shanghai"
 LANGUAGE_CODE = "zh-hans"
 
 LANGUAGES = (
-    ("en", u"English"),
-    ("zh-hans", u"简体中文"),
+    ("en", "English"),
+    ("zh-hans", "简体中文"),
 )
 
 """
@@ -165,6 +163,4 @@ if locals().get("DISABLED_APPS"):
     for _app, _key in itertools.product(DISABLED_APPS, _keys):
         if locals().get(_key) is None:
             continue
-        locals()[_key] = tuple(
-            [_item for _item in locals()[_key] if not _item.startswith(_app + ".")]
-        )
+        locals()[_key] = tuple([_item for _item in locals()[_key] if not _item.startswith(_app + ".")])

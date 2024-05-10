@@ -1,5 +1,5 @@
-from django.db import models
 from blueapps.account.models import User
+from django.db import models
 
 
 class WeChatUser(models.Model):
@@ -23,4 +23,4 @@ class Status(models.Model):
         return self.text
 
     class Meta:
-        ordering = ['-id']
+        ordering = ["-id"]
